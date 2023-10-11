@@ -1,0 +1,14 @@
+version: '3'
+services:
+  minedustryServer:
+    container_name: minedustryServer
+    image: openjdk:latest  
+    volumes:
+      - .:/app  
+    working_dir: /app
+    environment:
+      - MAP_NAME=map
+    ports:
+      - "6567:6567"
+    stdin_open: true 
+    tty: true

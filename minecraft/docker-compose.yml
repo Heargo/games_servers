@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  minecraft_server:
+    image: itzg/minecraft-server
+    environment:
+      - TYPE=FABRIC
+      # - FABRIC_LAUNCHER_VERSION=0.10.2
+      # - FABRIC_LOADER_VERSION=0.13.1
+      - EULA=TRUE
+    volumes:
+      - ./data:/data
+    ports:
+      - "25565:25565"
+    # Uncomment the following lines if using a custom launcher jar
+    # volumes:
+    #   - ./fabric-server-custom.jar:/data/fabric-server-custom.jar
